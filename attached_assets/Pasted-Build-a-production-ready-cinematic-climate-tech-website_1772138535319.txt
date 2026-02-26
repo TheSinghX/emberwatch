@@ -1,0 +1,296 @@
+Build a production-ready cinematic climate-tech website called “EMBERWATCH”.
+
+Tagline:
+Pre-Ignition Climate Intelligence.
+
+🔒 STRICT ARCHITECTURE RULES (NON-NEGOTIABLE)
+
+Use Next.js (App Router).
+
+Use TailwindCSS.
+
+Use Framer Motion for animations.
+
+Use Google Firebase Firestore as the ONLY database.
+
+Use Mapbox ONLY on the Intelligence page.
+
+DO NOT create any Express server.
+
+DO NOT create any custom backend.
+
+DO NOT use PostgreSQL.
+
+DO NOT use Prisma.
+
+DO NOT use Drizzle.
+
+DO NOT use server-side API routes.
+
+All data must be handled client-side using Firebase.
+
+Simulate live sensor updates using setInterval.
+
+The app must run cleanly using:
+
+npm install
+
+npm run dev
+
+Ensure there are NO backend dependency errors.
+
+🔥 FIREBASE IMPLEMENTATION REQUIREMENTS
+
+Create lib/firebase.ts:
+
+Initialize Firebase.
+
+Connect to Firestore.
+
+Export Firestore instance.
+
+Use Firestore collection called "nodes".
+
+Each node document must contain:
+
+temperature
+
+voc
+
+pm25
+
+soilMoisture
+
+riskScore
+
+status (NORMAL / WARNING / DANGER)
+
+lat
+
+lng
+
+updatedAt
+
+Use:
+
+onSnapshot() for realtime updates.
+
+setInterval() to simulate live sensor fluctuations.
+
+Risk score recalculated dynamically client-side.
+
+Firestore must be used only client-side.
+
+🗺 MAPBOX RULES
+
+Use Mapbox ONLY on Intelligence page.
+
+Store token in .env.local as:
+NEXT_PUBLIC_MAPBOX_TOKEN
+
+If token missing, render graceful fallback UI.
+
+Avoid SSR errors (use dynamic import with ssr: false if needed).
+
+🎨 DESIGN DIRECTION — APPLE CINEMATIC
+
+Design must feel like:
+
+Apple product launch page
+
+Minimal
+
+Premium
+
+Story-driven
+
+Spacious
+
+No clutter
+
+No over-glow
+
+No hacker aesthetic
+
+No cheesy neon
+
+No emojis
+
+🎨 COLOR SYSTEM
+
+Background:
+#0B0F14
+
+Accent:
+#FF6B35 (Ember Orange)
+
+Text:
+Soft gray-white (not pure white)
+
+Subtle animated grid background at 5–8% opacity.
+
+✨ ANIMATION RULES
+
+Use fade + translateY
+
+400–600ms duration
+
+Ease-out transitions
+
+Staggered entrance animations
+
+Smooth page transitions
+
+No aggressive motion
+
+No bounce effects
+
+No flashy effects
+
+Motion must feel premium and restrained.
+
+🌍 WEBSITE STRUCTURE
+1️⃣ HOME PAGE (CINEMATIC STORY SCROLL)
+
+Hero Section:
+Massive headline:
+Pre-Ignition Climate Intelligence.
+
+Minimal subtext explaining peat fire crisis.
+
+Large CTA:
+“Launch Live Intelligence”
+
+Scroll Sections:
+
+500,000 hectares lost annually.
+
+1.7 Billion tons CO₂ released.
+
+$16+ billion economic damage.
+
+Then:
+
+Detect.
+Predict.
+Prevent.
+
+Each word animates in sequence on scroll.
+
+End with CTA to Intelligence page.
+
+Whitespace-heavy layout.
+Massive typography.
+Minimal text blocks.
+
+2️⃣ PLATFORM PAGE
+
+Explain system clearly:
+
+Detect → Predict → Prevent
+
+Sections:
+
+Multi-Parameter Risk Engine
+
+Fire Spread Simulation
+
+Economic Impact Estimator
+
+Adaptive Threshold Intelligence
+
+Use clean layout with visual blocks.
+No long paragraphs.
+Minimal diagrams.
+Professional tone.
+
+3️⃣ INTELLIGENCE PAGE (SIMPLIFIED DASHBOARD)
+
+Minimal, clean intelligence interface.
+
+Components:
+
+Large Mapbox map (70% width)
+
+20 simulated sensor nodes
+
+Nodes color-coded:
+Green (NORMAL)
+Yellow (WARNING)
+Red (DANGER, subtle pulse)
+
+Floating circular risk gauge
+
+Minimal alert feed panel
+
+Impact projection panel
+
+Realtime updates via Firebase
+
+No clutter.
+No 20 small cards.
+Clean spacing.
+
+Simulated live updates every 5 seconds.
+
+4️⃣ IMPACT PAGE
+
+Large typography.
+
+Display:
+
+CO₂ emissions prevented
+
+Economic loss reduced
+
+Population exposure avoided
+
+Use animated number counters.
+Minimal supporting text.
+
+5️⃣ VISION PAGE
+
+Professional tone.
+
+Sections:
+
+Mission
+
+Deployment roadmap
+
+Hardware scalability plan ($52 IoT nodes future integration)
+
+Future expansion
+
+Keep it serious and concise.
+
+🧠 TECHNICAL REQUIREMENTS
+
+Use App Router structure.
+
+Clean folder organization.
+
+No unused dependencies.
+
+No backend references.
+
+No database server configs.
+
+Clean package.json (no express, pg, drizzle, prisma, tsx).
+
+Production-quality component structure.
+
+🎯 FINAL GOAL
+
+The website must feel like:
+
+A global climate intelligence product launch.
+
+Not a student project.
+Not an admin panel.
+Not a hacker dashboard.
+
+Premium.
+Cinematic.
+Minimal.
+Presentation-ready.
