@@ -1,18 +1,16 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+export const nodeSchema = z.object({
+  id: z.string(),
+  temperature: z.number(),
+  voc: z.number(),
+  pm25: z.number(),
+  soilMoisture: z.number(),
+  riskScore: z.number(),
+  status: z.enum(["NORMAL", "WARNING", "DANGER"]),
+  lat: z.number(),
+  lng: z.number(),
+  updatedAt: z.number(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-});
-
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type SensorNode = z.infer<typeof nodeSchema>;
